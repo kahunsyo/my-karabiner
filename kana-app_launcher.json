@@ -1,0 +1,129 @@
+{
+    "title": "japanese_kana App Launcher",
+    "rules": [
+        {
+            "description": "japanese_kana + Z to launch Microsoft Edge",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "japanese_kana",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "modifier_japanese_kana",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "modifier_japanese_kana",
+                                "value": 0
+                            }
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "japanese_kana"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "z",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "open -a '/Users/sora/Applications/new_window_edge.app'"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "modifier_japanese_kana",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "japanese_kana + X to launch Finder",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "japanese_kana",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "modifier_japanese_kana",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "modifier_japanese_kana",
+                                "value": 0
+                            }
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "japanese_kana"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "x",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "open -a '/Users/sora/Applications/new_window_finder.app'"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "modifier_japanese_kana",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

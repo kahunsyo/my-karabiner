@@ -1,0 +1,27 @@
+{
+    "title": "Replace CapsLock to Ctrl Left",
+    "rules": [
+        {
+            "description": "Replace CapsLock to Ctrl Left",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "caps_lock",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_control"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
