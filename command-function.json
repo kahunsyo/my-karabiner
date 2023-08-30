@@ -1,0 +1,63 @@
+{
+    "title": "Press command key alone to function key ",
+    "rules": [
+        {
+            "description": "Press left command key alone to F13 key",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_command",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_command"
+                        }
+                    ],
+                    "parameters": {
+                        "basic.to_if_alone_timeout_milliseconds": 2000
+                    },
+                    "to_if_alone": [
+                        {
+                            "key_code": "f13"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Press left command key alone to F14 key",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_command",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_command"
+                        }
+                    ],
+                    "parameters": {
+                        "basic.to_if_alone_timeout_milliseconds": 2000
+                    },
+                    "to_if_alone": {
+                        "key_code": "f14"
+                    }
+                }
+            ]
+        }
+    ]
+}
