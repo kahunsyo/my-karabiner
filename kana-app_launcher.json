@@ -50,7 +50,7 @@
                     },
                     "to": [
                         {
-                            "shell_command": "open -a '/Users/sora/Applications/new_window_edge.app'"
+                            "shell_command": "open -a '/Users/sora/Git/my-script-mac/new_window_edge.app'"
                         }
                     ],
                     "conditions": [
@@ -112,7 +112,7 @@
                     },
                     "to": [
                         {
-                            "shell_command": "open -a '/Users/sora/Applications/new_window_finder.app'"
+                            "shell_command": "open -a '/Users/sora/Git/my-script-mac/new_window_finder.app'"
                         }
                     ],
                     "conditions": [
