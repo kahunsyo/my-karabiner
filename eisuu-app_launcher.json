@@ -2,7 +2,7 @@
     "title": "japanese_eisuu App Launcher",
     "rules": [
         {
-            "description": "japanese_eisuu + W to launch Microsoft Edge",
+            "description": "japanese_eisuu + Z to launch Microsoft Edge",
             "manipulators": [
                 {
                     "type": "basic",
@@ -40,7 +40,7 @@
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "w",
+                        "key_code": "z",
                         "modifiers": {
                             "mandatory": [],
                             "optional": [
@@ -64,7 +64,7 @@
             ]
         },
         {
-            "description": "japanese_eisuu + E to launch Finder",
+            "description": "japanese_eisuu + X to launch Finder",
             "manipulators": [
                 {
                     "type": "basic",
@@ -102,7 +102,7 @@
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "e",
+                        "key_code": "x",
                         "modifiers": {
                             "mandatory": [],
                             "optional": [
