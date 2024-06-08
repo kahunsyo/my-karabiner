@@ -3,7 +3,9 @@ personal config files for Karabiner Elements
 
 ## Install
 
-Copy ``*.json`` files to ``~/.config/karabiner/assets/complex_modifications/``.
+```shell
+cp *.json ~/.config/karabiner/assets/complex_modifications/
+```
 
 ## Contents
 

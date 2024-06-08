@@ -1,0 +1,45 @@
+{
+  "title": "Press F11 with EN input method",
+  "rules": [
+    {
+      "description": "Press F11 with EN input method",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f11"
+          },
+          "to_if_alone": [
+            {
+              "select_input_source": {
+                "input_source_id": "^com\\.apple\\.keylayout\\.ABC$"
+              }
+            },
+            {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 100
+            },
+            {
+              "key_code": "f11"
+            },
+            {
+              "select_input_source": {
+                "input_source_id": "^org\\.mozc\\.inputmethod\\.Japanese\\.base$"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "input_sources": [
+                {
+                  "input_source_id": "^com\\.apple\\.keylayout\\.ABC$"
+                }
+              ],
+              "type": "input_source_unless"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
