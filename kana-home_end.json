@@ -88,7 +88,7 @@
             ]
         },
         {
-            "description": "japanese_kana + U/O Crtl Version : Typora, Slack, Notion in effect",
+            "description": "japanese_kana + U/O Crtl Version : excluded VSCode, iTerm2",
             "manipulators": [
                 {
                     "type": "basic",
@@ -149,12 +149,10 @@
                             "value": 1
                         },
                         {
-                            "type": "frontmost_application_if",
+                            "type": "frontmost_application_unless",
                             "bundle_identifiers": [
-                                "^abnerworks\\.Typora$",
-                                "^notion\\.id$",
-                                "^com\\.tinyspeck\\.slackmacgap$",
-                                "^/Applications/Slack\\.app"
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.microsoft\\.VSCode$"
                             ]
                         }
                     ]
@@ -185,11 +183,10 @@
                             "value": 1
                         },
                         {
-                            "type": "frontmost_application_if",
+                            "type": "frontmost_application_unless",
                             "bundle_identifiers": [
-                                "^abnerworks\\.Typora$",
-                                "^notion\\.id$",
-                                "^com\\.tinyspeck\\.slackmacgap$"
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.microsoft\\.VSCode$"
                             ]
                         }
                     ]
