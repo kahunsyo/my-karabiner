@@ -535,6 +535,65 @@
             ]
         },
         {
+            "description": "Underscore + Z to open Zoom",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "international1",
+                        "modifiers": {
+                            "mandatory": [],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "custom_modifier",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "custom_modifier",
+                                "value": 0
+                            }
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "international1"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "z",
+                        "modifiers": {
+                            "mandatory": []
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "open -a '/Applications/zoom.us.app/Contents/MacOS/zoom.us'"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "custom_modifier",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "description": "Underscore + C to open CyCal",
             "manipulators": [
                 {
